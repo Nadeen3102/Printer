@@ -12,6 +12,7 @@
       "supportsTablet": true
     },
     "android": {
+      
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -20,13 +21,28 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.nadeen_3102.MyPrinterApp"
+      "package": "com.nadeen_3102.MyPrinterApp",
+      "permissions": [
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "BLUETOOTH_CONNECT",
+        "BLUETOOTH_SCAN",
+        "ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      "./plugins/withMinSdkVersion.js",
+      [
+        "@stripe/stripe-terminal-react-native",
+        {
+          "bluetoothPeripheralPermission": "Allow $(PRODUCT_NAME) to connect to card readers",
+          "bluetoothAlwaysPermission": "Allow $(PRODUCT_NAME) to connect to card readers"
+        }
+      ],
       "expo-router",
       [
         "expo-splash-screen",
@@ -44,12 +60,6 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    },
-    "extra": {
-      "router": {},
-      "eas": {
-        "projectId": "cfa86bcb-1299-41ba-a8d1-93574fa5d9d3"
-      }
     }
   }
 }
