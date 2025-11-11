@@ -38,4 +38,5 @@ app.post("/create_payment_intent", async (req, res) => {
   }
 });
 
-app.listen(4242, () => console.log("Server running on port 4242"));
+const PORT = process.env.PORT || 4242;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

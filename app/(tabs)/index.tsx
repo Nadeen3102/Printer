@@ -11,7 +11,7 @@ import {
 } from '@stripe/stripe-terminal-react-native';
 
 const { PrinterModule } = NativeModules;
-const SERVER_URL = 'http://10.0.2.2:4242'; // replace with your local IP
+const SERVER_URL = 'https://printer-production-cc72.up.railway.app';
 
 export default function HomeScreen() {
   const [status, setStatus] = useState<string>('');
