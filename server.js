@@ -44,4 +44,8 @@ app.get("/", (req, res) => {
 
 
 const PORT = process.env.PORT || 4242;
-app.listen(PORT, '0.0.0.0', () => console.log(`Server running on port ${PORT}`));
+// CRITICAL: Bind to 0.0.0.0
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ Server is listening on 0.0.0.0:${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+});
