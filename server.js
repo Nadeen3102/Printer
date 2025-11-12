@@ -38,5 +38,10 @@ app.post("/create_payment_intent", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("✅ Stripe Terminal Server is running!");
+});
+
+
 const PORT = process.env.PORT || 4242;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
