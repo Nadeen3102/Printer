@@ -2,7 +2,6 @@
   "name": "myprinterapp",
   "main": "expo-router/entry",
   "version": "1.0.0",
-   
   "scripts": {
     "expo": "expo start",
     "start": "node server.js",
@@ -18,6 +17,7 @@
     "@react-navigation/elements": "^2.6.3",
     "@react-navigation/native": "^7.1.8",
     "@stripe/stripe-terminal-react-native": "^0.0.1-beta.27",
+    "axios": "^1.13.2",
     "dotenv": "^17.2.3",
     "expo": "54.0.23",
     "expo-constants": "~18.0.10",

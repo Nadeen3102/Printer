@@ -6,7 +6,7 @@ import { StripeTerminalProvider } from '@stripe/stripe-terminal-react-native';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
-const SERVER_URL = 'http://10.0.2.2:4242'; 
+const SERVER_URL = 'https://printer-production-cc72.up.railway.app';
 
 // This function is required by TerminalProvider. 
 // It fetches a connection token from your backend.
